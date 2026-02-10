@@ -14,14 +14,16 @@ public class Session {
 
     private Integer id;
     private String name;
-    private LocalDateTime dateTime;
+    private LocalDateTime startDateTime;
+    private LocalDateTime endDateTime;
     private Integer roomId;
     private Map<Integer, Integer> ticketTypeIdsByQtd;
 
     public boolean isValid() {
         return name != null
                 && !name.isEmpty()
-                && dateTime != null
+                && startDateTime != null
+                && endDateTime != null
                 && roomId != null
                 && ticketTypeIdsByQtd != null
                 && !ticketTypeIdsByQtd.isEmpty();
